@@ -1,3 +1,9 @@
+<?php
+/**
+ * User: Mustafa Emre Ilhan
+ * Job: Junior Software Developer
+ */?>
+
 <div id="side-panel" class="side-panel">
 		<div class="panel-header">
 			<h4 class="panel-title">Friends</h4>

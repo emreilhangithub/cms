@@ -1,14 +1,18 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+/**
+ * User: Mustafa Emre Ilhan
+ * Job: Junior Software Developer
+ */
 
-class Dashboard extends CI_Controller {
+class Product extends CI_Controller
+{
 
-	public $viewFolder = "";
+    public $viewFolder = "";
 
-	public function __construct()
+    public function __construct()
     {
         parent::__construct();
-        $this->viewFolder = "dashboard_v";
+        $this->viewFolder = "product_v";
     }
 
     public function index()

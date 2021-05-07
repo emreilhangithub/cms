@@ -1,3 +1,9 @@
+<?php
+/**
+ * User: Mustafa Emre Ilhan
+ * Job: Junior Software Developer
+ */?>
+
 <!-- build:js /assets/js/core.min.js -->
 <script src="<?php echo base_url("assets"); ?>/libs/bower/jquery/dist/jquery.js"></script>
 <script src="<?php echo base_url("assets"); ?>/libs/bower/jquery-ui/jquery-ui.min.js"></script>

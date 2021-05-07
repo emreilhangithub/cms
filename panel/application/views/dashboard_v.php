@@ -35,10 +35,11 @@
 <!--========== END app main -->
 
 	<!-- APP CUSTOMIZER -->
+   <!-- includes/app-bar -->
 	<!-- #app-customizer -->
 	
 	<!-- SIDE PANEL -->
-    <?php $this->load->view("includes/right-aside"); ?>
+   <!-- includes/right-aside -->
 	<!-- /#side-panel -->
 
     <?php $this->load->view("includes/include_script"); ?>

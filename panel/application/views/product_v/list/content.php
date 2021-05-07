@@ -17,10 +17,16 @@
     <div class="col-md-12">
         <div class="widget p-lg">
 
+            <?php
+            if (empty($items)) { ?>
+
             <div class="alert alert-info text-center">
-             <!--   <h5 class="alert-title">Kayıt Bulunamadı</h5>  -->
                 <p>Burada herhangi bir veri bulunmamaktadır.Eklemek için lütfen <a href="#">Tıklayınız</a></p>
             </div>
+
+            <?php } else { ?>
+
+
 
             <table class="table table-hover table-striped">
                <thead>
@@ -32,25 +38,35 @@
                     <th>İşlem</th>
                </thead>
                 <tbody>
+
+                <?php foreach ($items as $item) { echo "<pre>";print_r($item); ?>
+
                 <tr>
-                    <td>#1</td>
-                    <td>#1</td>
-                    <td>#1</td>
-                    <td>#1</td>
+                    <td><?php echo $item->id ?></td>
+                    <td><?php echo $item->url ?></td>
+                    <td><?php echo $item->title ?></td>
+                    <td><?php echo $item->description ?></td>
                    <td>
-                        <input id="switch-2-2" type="checkbox" data-switchery data-color="#10c469" checked />
+                        <input
+                                type="checkbox"
+                                data-switchery
+                                data-color="#10c469"
+                                <?php echo $item->isActive ? "checked" : "";  ?>
+                                 />
                    </td>
                     <td>
                         <a href="#" class="btn btn-sm btn-danger btn-outline"><i class="fa fa-trash">Sil</i></a>
                         <a href="#" class="btn btn-sm btn-info btn-outline"><i class="fa fa-pencil-square-o">Düzenle</i></a>
-
-
-
                     </td>
                 </tr>
 
+                <?php } ?>
+
                 </tbody>
             </table>
+
+            <?php } ?>
+
         </div><!-- .widget -->
     </div><!-- END column -->
 

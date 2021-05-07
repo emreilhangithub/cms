@@ -10,7 +10,7 @@
     <div class="col-md-12">
         <h4 class="m-b-lg">
             Ürünler Listesi
-            <a href="#" class="btn btn-outline btn-xs btn-primary pull-right"><i class="fa fa-plus"></i>Yeni Ekle</a>
+            <a href="<?php echo base_url("product/new_form");?>" class="btn btn-outline btn-xs btn-primary pull-right"><i class="fa fa-plus"></i>Yeni Ekle</a>
         </h4>
     </div><!-- END column -->
 
@@ -21,7 +21,10 @@
             if (empty($items)) { ?>
 
             <div class="alert alert-info text-center">
-                <p>Burada herhangi bir veri bulunmamaktadır.Eklemek için lütfen <a href="#">Tıklayınız</a></p>
+                <p>Burada herhangi bir veri bulunmamaktadır.Eklemek için lütfen
+                    <a href="<?php echo base_url("product/new_form");?>">
+                        Tıklayınız
+                    </a></p>
             </div>
 
             <?php } else { ?>
@@ -39,7 +42,7 @@
                </thead>
                 <tbody>
 
-                <?php foreach ($items as $item) { echo "<pre>";print_r($item); ?>
+                <?php foreach ($items as $item) { ?>
 
                 <tr>
                     <td><?php echo $item->id ?></td>

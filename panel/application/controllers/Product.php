@@ -31,4 +31,23 @@ class Product extends CI_Controller
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
     }
+
+    public  function new_form()
+    {
+        $viewData = new stdClass();
+        $viewData->viewFolder = $this->viewFolder;
+        $viewData->subViewFolder = "add";
+
+        $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
+    }
+
+    public  function  save()
+    {
+        //echo "test";
+       $post =  $this->input->post();
+       print_r($post)  ;
+    }
+
+
+
 }

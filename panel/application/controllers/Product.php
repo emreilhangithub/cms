@@ -107,7 +107,6 @@ class Product extends CI_Controller
 
     }
 
-
     public  function update_form($id)
     {
         /* Tablodan Verilerin Getirilmesi*/
@@ -122,6 +121,74 @@ class Product extends CI_Controller
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
     }
 
+    public  function  update($id)
+    {
+        $this->load->library("form_validation");
+
+        //Kurallar Yazılır
+        $this->form_validation->set_rules("title","Başlık","required|trim");
+
+        //Hata Mesajları
+        $this->form_validation->set_message(
+            array(
+                "required" => "<b>{field}</b> alanı doldurulmalıdır",
+            )
+        );
+
+        //Form Validation Çalıştırılır
+        //TRUE - FALSE
+        $validate =  $this->form_validation->run();
+
+        //Monitör Askısı //monitor-askisi
+
+        if ($validate)
+        {
+            $update =  $this->product_model->update(
+                array(
+                    "id"=>$id
+                ),
+                array(
+                    "title"        =>  $this->input->post("title"),
+                    "description"  =>  $this->input->post("description"),
+                    "url"          =>  convertToSeo($this->input->post("title"))
+                )
+            );
+
+            if ($update)
+            {
+                redirect(base_url("product/update_form/$id"));
+            }
+            else
+            {
+                redirect(base_url("product/update_form/$id"));
+            }
+
+        }
+        else
+        {
+            $viewData = new stdClass();
+
+            /* Tablodan Verilerin Getirilmesi*/
+            $item = $this->product_model->get(array("id" => $id));
+
+            $viewData->viewFolder = $this->viewFolder;
+            $viewData->subViewFolder = "update";
+            $viewData->form_error = true;
+            $viewData->item = $item; //title bos kalırsa hataya düşer ve biz bunu gönder zorundayız updatede
+
+            $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
+
+            //echo validation_errors();
+            //echo "Bir şeyler terst gitti";
+        }
+
+
+        //Başarılı ise kayıt kayıt işlemi başlar
+
+        //Başarısız ise hata ekranda göster
+
+
+    }
 
 
 }

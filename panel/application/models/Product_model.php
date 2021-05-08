@@ -31,5 +31,11 @@ class Product_model extends CI_Model
         //nereye neyi kaydedecek sorusuna cevap vermek lazım
     }
 
+    public function update($where=array(),$data=array()) //kayıt günceller
+    {
+        return $this->db->where($where)->update($this->tableName,$data);
+        //nererde neyi kaydecegız where kosulunu kullanmak zorundayız burada
+    }
+
 
 }

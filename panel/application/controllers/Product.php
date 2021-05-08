@@ -59,9 +59,31 @@ class Product extends CI_Controller
         //TRUE - FALSE
         $validate =  $this->form_validation->run();
 
+        //Monitör Askısı //monitor-askisi
+
         if ($validate)
         {
-            echo "Kayıt işlemi başlar";
+         $insert =  $this->product_model->add(
+             array(
+                 "title"        =>  $this->input->post("title"),
+                 "description"  =>  $this->input->post("description"),
+                 "url"          =>  "test",
+                 "rank"         =>  0,
+                 "isActive"     =>  1,
+                 "createdAt"    =>  date("Y-m-d H:i:s")
+         )
+         );
+
+         if ($insert)
+         {
+             echo "kayıt işlemi başarılıdır";
+         }
+         else
+         {
+             echo "işlem başarısızdır";
+         }
+
+
         }
         else
         {

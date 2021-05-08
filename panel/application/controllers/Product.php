@@ -22,6 +22,7 @@ class Product extends CI_Controller
 
         /* Tablodan Verilerin Getirilmesi*/
         $items = $this->product_model->get_all();
+        //$items = $this->product_model->get_all(array("isActive"=>1));
 
         /* View Gönderilecek verilerin Set Edilmesi */
         $viewData->viewFolder = $this->viewFolder;
@@ -104,6 +105,21 @@ class Product extends CI_Controller
         //Başarısız ise hata ekranda göster
 
 
+    }
+
+
+    public  function update_form($id)
+    {
+        /* Tablodan Verilerin Getirilmesi*/
+        $item = $this->product_model->get(array("id" => $id));
+
+        /* View Gönderilecek verilerin Set Edilmesi */
+        $viewData = new stdClass();
+        $viewData->viewFolder = $this->viewFolder;
+        $viewData->subViewFolder = "update";
+        $viewData->item=$item;
+
+        $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
     }
 
 

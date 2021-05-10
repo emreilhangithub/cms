@@ -21,7 +21,7 @@ class Product extends CI_Controller
         $viewData = new stdClass();
 
         /* Tablodan Verilerin Getirilmesi*/
-        $items = $this->product_model->get_all();
+        $items = $this->product_model->get_all(array(),"rank ASC");
         //$items = $this->product_model->get_all(array("isActive"=>1));
 
         /* View Gönderilecek verilerin Set Edilmesi */
@@ -220,6 +220,31 @@ class Product extends CI_Controller
           );
 
       }
+    }
+
+    public function rankSetter()
+    {
+       $data =  $this->input->post("data");
+
+       parse_str($data,$order);
+       //stringi parse edecegiz degisikligide order isimli degiskene aktar
+        //print_r($order);
+        $items = $order["ord"];
+        //print_r($items);
+        foreach ($items as $rank => $id)
+        {
+            $this->product_model->update(
+                array(
+                    "id"      =>    $id,
+                    "rank !=" =>    $rank //rankı ranka eşit degilse bunu ekledik
+                ),
+                array(
+                    "rank"=>$rank
+                )
+            );
+        }
+
+
     }
 
 }

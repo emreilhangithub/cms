@@ -32,6 +32,8 @@ swal.fire({
 
 $(document).ready(function () {
 
+    $(".sortable").sortable(); //bu tabloda sortable calıstır alt dallarında
+
     $(".remove-btn").click(function () {
 
         var $data_url = $(this).data("url");
@@ -69,5 +71,19 @@ $(document).ready(function () {
 
     })
     /* http://abpetkov.github.io/switchery/ */
+
+    $(".sortable").on("sortupdate",function (event,ui) {
+        //alert();
+        var $data = $(this).sortable("serialize"); //sıralar bize
+        var $data_url = $(this).data("url");
+
+        $.post($data_url,{data:$data},function (response) {
+            //alert(response);
+        });
+
+    });
+    /*herhangi bir guncelleme sıralama degisiklik olursa*/
+
+
 
 })

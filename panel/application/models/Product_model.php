@@ -19,9 +19,9 @@ class Product_model extends CI_Model
         //Ama birden fazla şart koyabilirim getirirken o nedenle array dedik
     }
 
-    public function get_all($where =array()) //Tüm kayıtları getirir
+    public function get_all($where =array(),$order="id ASC") //Tüm kayıtları getirir
     {
-        return $this->db->where($where)->get($this->tableName)->result();
+        return $this->db->where($where)->order_by($order)->get($this->tableName)->result();
         // eğer biz bir şart belirtsek ona göre tümünü getirmesi için where koyduk where parametre gelmesede calısıyor
     }
 

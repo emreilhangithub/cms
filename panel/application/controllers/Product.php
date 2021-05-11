@@ -263,7 +263,12 @@ class Product extends CI_Controller
         $viewData->item =  $this->product_model->get(
             array(
                 "id"=>$id
-            ));
+            )); //burada ürün bilgilerini viewe gönderdim
+
+        $viewData->item_images =  $this->product_image_model->get_all(
+            array(
+                "product_id"=>$id
+            )); //burda ürüne ait resimlerin bilgilerini viewe gönderdim
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
     }

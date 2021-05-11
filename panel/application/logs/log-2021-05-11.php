@@ -1,5 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
+<<<<<<< HEAD
 ERROR - 2021-05-11 11:51:31 --> The upload path does not appear to be valid.
 ERROR - 2021-05-11 12:21:05 --> Severity: error --> Exception: Unable to locate the model you have specified: Produc_image_model C:\xampp\htdocs\cms\panel\system\core\Loader.php 344
 ERROR - 2021-05-11 12:21:09 --> Severity: error --> Exception: Unable to locate the model you have specified: Produc_image_model C:\xampp\htdocs\cms\panel\system\core\Loader.php 344
@@ -37,3 +38,7 @@ ERROR - 2021-05-11 12:30:27 --> Query error: Table 'cms.product_image' doesn't e
 ERROR - 2021-05-11 12:31:50 --> Query error: Table 'cms.product_image' doesn't exist - Invalid query: INSERT INTO `product_image` (`img_url`, `rank`, `isActive`, `createdAt`, `product_id`) VALUES ('Ekran_Görüntüsü_(62)3.png', 0, 1, '2021-05-11 12:31:50', '1')
 ERROR - 2021-05-11 12:32:23 --> Query error: Table 'cms.product_image' doesn't exist - Invalid query: INSERT INTO `product_image` (`img_url`, `rank`, `isActive`, `createdAt`, `product_id`) VALUES ('Ekran_Görüntüsü_(62).png', 0, 1, '2021-05-11 12:32:23', '1')
 ERROR - 2021-05-11 12:35:43 --> Query error: Table 'cms.product_image' doesn't exist - Invalid query: INSERT INTO `product_image` (`img_url`, `rank`, `isActive`, `createdAt`, `product_id`) VALUES ('Ekran_Görüntüsü_(61).png', 0, 1, '2021-05-11 12:35:43', '1')
+=======
+ERROR - 2021-05-11 10:07:17 --> 404 Page Not Found: Assets/css
+ERROR - 2021-05-11 10:07:44 --> 404 Page Not Found: Assets/css
+>>>>>>> e310d443378db3a018d8dca122ae94d0d0c837e3

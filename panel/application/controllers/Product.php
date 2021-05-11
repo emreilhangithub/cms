@@ -259,7 +259,34 @@ class Product extends CI_Controller
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "image";
 
+        $viewData->item =  $this->product_model->get(
+            array(
+                "id"=>$id
+            ));
+
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
+    }
+
+    public function image_upload()
+    {
+
+        $config['upload_path']          = "uploads/{$this->viewFolder}/";
+        $config['allowed_types']        = 'jpg|jepg|png';
+
+        $this->load->library('upload', $config);
+
+        $upload =  $this->upload->do_upload('file');
+
+
+        if ( $upload)
+        {
+           echo "işlem başarılı";
+        }
+        else
+        {
+           echo "işlem başarısız";
+        }
+
     }
 
 }

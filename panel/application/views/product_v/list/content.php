@@ -31,7 +31,7 @@
 
 
 
-            <table class="table table-hover table-striped">
+            <table class="table table-bordered table-hover table-striped">
                <thead>
                <th><i class="fa fa-reorder"  </i></th>
                     <th>#Id</th>

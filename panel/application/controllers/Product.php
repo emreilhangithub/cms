@@ -36,6 +36,9 @@ class Product extends CI_Controller
     public  function new_form()
     {
         $viewData = new stdClass();
+
+        /* View Gönderilecek verilerin Set Edilmesi */
+
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "add";
 
@@ -245,6 +248,18 @@ class Product extends CI_Controller
         }
 
 
+    }
+
+
+    public function image_form($id)
+    {
+        $viewData = new stdClass();
+
+        /* View Gönderilecek verilerin Set Edilmesi */
+        $viewData->viewFolder = $this->viewFolder;
+        $viewData->subViewFolder = "image";
+
+        $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
     }
 
 }

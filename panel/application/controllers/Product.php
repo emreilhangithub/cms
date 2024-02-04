@@ -278,6 +278,16 @@ class Product extends CI_Controller
 
 
         $config['upload_path']          = "uploads/$this->viewFolder/";
+		$upload_path = "uploads/$this->viewFolder/";
+
+		if (!is_dir($upload_path)) {
+			mkdir($upload_path, 0777, true); // Dizini oluşturun, izinleri uygun bir şekilde ayarlayın
+		}
+		else
+        {
+            echo "Dosya Oluşturulamadı";
+        }
+
         $config['allowed_types']        = "jpg|jepg|png";
 
         $this->load->library("upload", $config);
@@ -303,7 +313,7 @@ class Product extends CI_Controller
 
         else
         {
-           echo "işlem başarısız";
+            echo "İşlem başarısız. Hata: " . $this->upload->display_errors();
         }
 
     }

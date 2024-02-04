@@ -34,27 +34,27 @@ Bu kısımda eklenmiş ürünleri görebilirsiniz database boş o nedenle yeni �
 
 ### Ürünler Ekleme
 Bu kısımda ürün ekleme işlemi yapabilirsiniz.
-![urunler](https://github.com/emreilhangithub/cms/blob/main/img/UrunEkleme.png)
+![urunekleme](https://github.com/emreilhangithub/cms/blob/main/img/UrunEkleme.png)
 
 ### Ürünler Silme
 Bu kısımda ürün silme işlemi yapabilirsiniz.
-![urunler](https://github.com/emreilhangithub/cms/blob/main/img/UrunSil.png)
+![urunsilme](https://github.com/emreilhangithub/cms/blob/main/img/UrunSil.png)
 
 ### Ürünler Düzenleme
 Bu kısımda ürün düzenleme işlemi yapabilirsiniz.
-![urunler](https://github.com/emreilhangithub/cms/blob/main/img/UrunDuzenleme.png)
+![urunduzenleme](https://github.com/emreilhangithub/cms/blob/main/img/UrunDuzenleme.png)
 
 ### Ürünler Durumu
-Bu kısımda ürün ekleme işlemi yapabilirsiniz.
-![urunler](https://github.com/emreilhangithub/cms/blob/main/img/UrunEkleme.png)
+Bu kısımda ürünü aktif/pasif olarak güncelleyebilirsiniz.
+![urundurumu](https://github.com/emreilhangithub/cms/blob/main/img/UrunDurumu.png)
 
 ### Ürüne Resim Ekleme
-Eklediğiniz resime  resimleri kayda ait resimler kısmında görebilirsiniz.
-![urunler](https://github.com/emreilhangithub/cms/blob/main/img/UruneAitResimler.png)
+Eklediğiniz ürüne resim ekleyebilirsiniz "yüklemek istediğiniz resmi buraya sürükleyebilirsiniz".
+![urunresimekleme](https://github.com/emreilhangithub/cms/blob/main/img/UruneAitResimler.png)
 
 ### Ürüne Ait Resimler
-Bu kısımda ürüne ait resimleri görebilirsiniz.
-![urunler](https://github.com/emreilhangithub/cms/blob/main/img/ResimlerEklendi.png)
+Bu kısımda ürüne ait daha öncede yüklemiş olduğunuz veya yeni yüklediğiniz resimleri görüntüleyebilirsiniz.
+![uruneaitresimler](https://github.com/emreilhangithub/cms/blob/main/img/ResimlerEklendi.png)
 
 ### Kaynaklar ###
 https://codeigniter.com/userguide3/index.html
